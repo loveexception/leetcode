@@ -33,7 +33,7 @@ class Solution {
     	result[1]=-1;
     	for(int i=0;i< nums.length ; i ++){
     		int want = target- nums[i] ;
-    		for(int j= nums.length-1 ; j==i ;i--){
+    		for(int j= nums.length-1 ; j > i ; j--){
     			if(nums[j]==want){
     				result[0]= i;
     				result[1]=j;
