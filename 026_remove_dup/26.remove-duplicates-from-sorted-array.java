@@ -29,6 +29,20 @@
  */
 class Solution {
     public int removeDuplicates(int[] nums) {
-        
+    	int sum = 0;
+    	int j = 0 ; 
+    	int next = 0;
+    	for(int i = 0 ; i<  nums.length ; i ++ ){
+			nums[j] = nums[i];
+
+    		
+    		if(next == nums[i] && i!= 0 ){
+       			continue;
+    		}
+    		j++;
+    		next = nums[i];
+    		sum++;
+    	}
+        return sum;
     }
 }
